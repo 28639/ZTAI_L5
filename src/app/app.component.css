@@ -1,0 +1,15 @@
+li {
+  color: white;
+}
+
+ul li {
+  display: inline;
+}
+
+ul {
+  display: block;
+  background-color: black;
+}
+
+
+
