@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {DataSerivce} from '../../services/data-service';
 
 @Component({
   selector: 'app-blog',
@@ -7,41 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
 
-  items = [
-    {
-      title:'Baryłki',
-      text:'baryłki sa super',
-      image:'https://upload.wikimedia.org/wikipedia/commons/2/2a/%C3%96lf%C3%A4sser_Wietze.jpg'
-    }
-    ,
-    {
-      text:'Tytuł',
-      image:'https://upload.wikimedia.org/wikipedia/commons/2/2a/%C3%96lf%C3%A4sser_Wietze.jpg'
-    }
-    ,
-    {
-      text:'Tytuł',
-      image:'https://upload.wikimedia.org/wikipedia/commons/2/2a/%C3%96lf%C3%A4sser_Wietze.jpg'
-    }
-    ,
-    {
-      text:'Tytuł',
-      image:'https://upload.wikimedia.org/wikipedia/commons/2/2a/%C3%96lf%C3%A4sser_Wietze.jpg'
-    }
-    ,
-    {
-      text:'Tytuł',
-      image:'https://upload.wikimedia.org/wikipedia/commons/2/2a/%C3%96lf%C3%A4sser_Wietze.jpg'
-    }
-    ,
-    {
-      text:'Tytuł',
-      image:'https://upload.wikimedia.org/wikipedia/commons/2/2a/%C3%96lf%C3%A4sser_Wietze.jpg'
-    }
-  ]
-  constructor() { }
+  items: any = [];
+
+  constructor(private dataService: DataSerivce) { }
 
   ngOnInit() {
+    this.dataService.getAll().subscribe(result => {
+      this.items = result;
+    } );
   }
 
 }
