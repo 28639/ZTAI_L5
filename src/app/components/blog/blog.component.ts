@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {DataSerivce} from '../../services/data-service';
 
 @Component({
@@ -7,6 +7,7 @@ import {DataSerivce} from '../../services/data-service';
   styleUrls: ['./blog.component.css']
 })
 export class BlogComponent implements OnInit {
+  @Input() filterText: string;
 
   items: any = [];
 

@@ -15,6 +15,9 @@ import {HttpClientModule} from '@angular/common/http';
 import {DataSerivce} from './services/data-service';
 import { FilterPipe } from './pipes/filter.pipe';
 import { FormsModule } from '@angular/forms';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { BlogHomeComponent } from './blog-home/blog-home.component';
+import { TextFormatDirective } from './directives/text-format.directive';
 
 
 const appRoutes: Routes = [
@@ -28,7 +31,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'blog',
-    component: BlogComponent,
+    component: BlogHomeComponent,
   },
   {
     path: 'contact',
@@ -52,7 +55,10 @@ const appRoutes: Routes = [
     BlogItemComponent,
     BlogItemImageComponent,
     BlogItemTextComponent,
-    FilterPipe
+    FilterPipe,
+    SearchBarComponent,
+    BlogHomeComponent,
+    TextFormatDirective
   ],
   imports: [
 

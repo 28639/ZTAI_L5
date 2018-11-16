@@ -1,0 +1,21 @@
+{
+  "name": "tai-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app/index.js",
+    "app": "./node_modules/.bin/nodemon app"
+  },
+  "dependencies": {
+    "babel-core": "6.26.3",
+    "babel-preset-es2015": "6.24.1",
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "1.18.6"
+  },
+  "author": "KacperLazarowicz",
+  "license": "ISC"
+}
