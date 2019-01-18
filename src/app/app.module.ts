@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { BlogHomeComponent } from './blog-home/blog-home.component';
 import { TextFormatDirective } from './directives/text-format.directive';
+import { LoginComponent } from './components/login/login.component';
 
 
 const appRoutes: Routes = [
@@ -58,7 +59,8 @@ const appRoutes: Routes = [
     FilterPipe,
     SearchBarComponent,
     BlogHomeComponent,
-    TextFormatDirective
+    TextFormatDirective,
+    LoginComponent
   ],
   imports: [
 
