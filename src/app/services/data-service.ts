@@ -6,7 +6,7 @@ import {map} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class DataSerivce {
-  private url = 'https://jsonplaceholder.typicode.com';
+  private url = 'http://localhost:8080';
 
   constructor(private http: HttpClient) {
   }
