@@ -1,7 +1,15 @@
 package kaban.post;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class Post {
-    private long id;
+
+    @Id
+    @GeneratedValue
+    private Long id;
     private String title;
     private String url;
     private String content;
@@ -13,28 +21,42 @@ public class Post {
         this.content = content;
     }
 
-    public long getId(){
+    public Long getId() {
         return id;
     }
-    public String getTitle(){
+
+    public String getTitle() {
+
         return title;
     }
-    public String getUrl(){
+
+    public String getUrl() {
+
         return url;
     }
-    public String getContent(){
+
+    public String getContent() {
+
         return content;
     }
-    public void setId(long id){
+
+    public void setId(Long id) {
+
         this.id = id;
     }
-    public void setTitle(String title){
+
+    public void setTitle(String title) {
+
         this.title = title;
     }
-    public void setUrl(String url){
+
+    public void setUrl(String url) {
+
         this.url = url;
     }
-    public void setContent(String content){
+
+    public void setContent(String content) {
+
         this.content = content;
     }
 }
